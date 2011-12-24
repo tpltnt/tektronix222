@@ -10,5 +10,6 @@ should be readily available.
 
 Ressources
 ----------
+* some info: http://www.radiomuseum.org/r/tektronix_oscilloscope_222.html
 * manual: http://www.eserviceinfo.com/downloadsm/36568/Tektronix_222.html
 * FTDI driver: http://www.ftdichip.com/FTDrivers.htm
