@@ -6,3 +6,5 @@
 *.pyc
 *.py~
 *.feature~
+.gitignore~
+*.md~
