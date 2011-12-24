@@ -14,3 +14,4 @@ Ressources
 * manual: http://www.eserviceinfo.com/downloadsm/36568/Tektronix_222.html
 * FTDI driver: http://www.ftdichip.com/FTDrivers.htm
 * pySerial: http://pyserial.sourceforge.net/
+* lettuce: http://packages.python.org/lettuce/
