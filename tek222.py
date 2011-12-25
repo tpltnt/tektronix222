@@ -61,4 +61,9 @@ class Tek222(object):
 			raise
 
 	def disconnect():
+		""" Disconnect the serial port."""
 		return __serialport__.close
+	
+	def close():
+		""" alias for disconnect() """
+		self.disconnect
