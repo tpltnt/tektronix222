@@ -42,6 +42,22 @@ class Tek222(object):
 		__author__ = 'tpltnt'
 		__license__ = 'Modified BSD License'
 		__copyright__ = 'Copyright 2011 tpltnt'
+		
+		# list of buttons
+		__button__ = {	'1': 'CLEAR',
+						'2': 'Menu Item 0',
+						'3': 'Menu Item 1',
+						'4': 'Menu Item 2',
+						'5': 'Menu Item 3',
+						'6': 'OFF',
+						'9': 'Trigger SOURCE',
+						'A': 'Trigger MODE',
+						'B': 'Trigger SLOPE',
+						'C': 'CH2 SELECT',
+						'D': 'CH1 SELECT',
+						'E': 'AUTO SETUP',
+					   '11': 'Front-Panel Setup Menu',
+					   '22': 'AUTO LVL:PUSH'}
 		try:
 			self.portstr = portstring
 			"""
