@@ -13,7 +13,7 @@ def when_the_object_is_initialized(step):
 	assert 'Tek222' in str(world.scope.__class__), "object initialized %s" % world.scope.__class__
 
 @step(u'Then it should open the given serial port')
-def then_it_should_open_the_first_file(step):
+def then_it_should_open_the_given_serial_port(step):
 	currentport = world.scope.portstr
 	assert '/dev/' in currentport, "first port taken %s" % currentport
 
@@ -27,6 +27,7 @@ def when_the_oscilloscope_is_disconnected(step):
 
 @step(u'Then the serial port should be closed')
 def then_the_serial_port_should_be_closed(step):
+	# read should fail
     assert None == world.scope.portstr , 'portstring after disconnect %s' % world.scope.portstr
 
 @step(u'When the oscilloscope is unplugged')

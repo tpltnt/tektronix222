@@ -60,8 +60,7 @@ class Tek222(object):
 			raise
 
 	def disconnect():
-		""" Disconnect the serial port. Having no portstring indicates it."""
-		self.portstr = None
+		""" Disconnect the serial port."""
 		return __serialport__.close
 	
 	def close():
