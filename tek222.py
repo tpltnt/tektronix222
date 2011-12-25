@@ -44,7 +44,7 @@ class Tek222(object):
 		__copyright__ = 'Copyright 2011 tpltnt'
 		
 		# list of buttons
-		self.button = {	'CLEAR' : '1',
+		__button__ = {	'CLEAR' : '1',
 						'Menu Item 0' : '2',
 						'Menu Item 1' : '3',
 						'Menu Item 2' : '4',
@@ -84,9 +84,9 @@ class Tek222(object):
 			self.portstr = None
 			raise
 
-	def press_button(buttoncode):
+	def press_button(buttonlabel):
 		"""simulates pressing a button. returns number of bytes written."""
-		return __serialport__.write("BUT %s\r", buttoncode)
+		return __serialport__.write("BUT %s\r", __button__[buttonlabel])
 		
 	def disconnect():
 		""" Disconnect the serial port."""
