@@ -3,7 +3,7 @@ import sys
 sys.path.append('../../tektronix222/')
 from tek222 import Tek222
 
-@step(u'Given there is no file named')
+@step(u'Given there is a working serial port')
 def given_there_is_no_file_named(step):
 	assert True, 'yay!'
 
@@ -27,7 +27,7 @@ def when_the_oscilloscope_is_disconnected(step):
 
 @step(u'Then the serial port should be closed')
 def then_the_serial_port_should_be_closed(step):
-    assert False, 'This step must be implemented'
+    assert None == world.scope.portstr , 'portstring after disconnect %s' % world.scope.portstr
 
 @step(u'When the oscilloscope is unplugged')
 def when_the_oscilloscope_is_unplugged(step):

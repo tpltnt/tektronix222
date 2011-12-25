@@ -29,7 +29,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import serial
 
-
 class Tek222(object):
 	"""This is a class for interfacing to the Tektronix 222 oscilloscope.
 
@@ -67,4 +66,4 @@ class Tek222(object):
 	
 	def close():
 		""" alias for disconnect() """
-		self.disconnect
+		return self.disconnect

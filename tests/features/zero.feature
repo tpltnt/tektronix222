@@ -4,7 +4,7 @@ Feature: Use serial port
 
 
 	Scenario: Open with given serial port
-		Given there is no file named
+		Given there is a working serial port
 		When the object is initialized
 		Then it should open the given serial port
 
