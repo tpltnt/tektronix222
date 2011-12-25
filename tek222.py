@@ -26,6 +26,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
+import serial
 
 class Tek222(object):
 	"""This is a class for interfacing to the Tektronix 222 oscilloscope.
@@ -39,5 +40,8 @@ class Tek222(object):
 		__author__ = 'tpltnt'
 		__license__ = 'Modified BSD License'
 		__copyright__ = 'Copyright 2011 tpltnt'
-		self.serialport = '/dev/ttyUSB0'
+		self.serialport = serial.Serial(0)
+		self.portstr = serialport.portstr
 
+	def disconnect():
+		serialport.close
