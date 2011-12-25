@@ -57,6 +57,15 @@ class Tek222(object):
 						'D': 'CH1 SELECT',
 						'E': 'AUTO SETUP',
 					   '11': 'Front-Panel Setup Menu',
+					   '12': 'Trigger Position Menu',
+					   '13': 'Auxiliary Functions Menu',
+					   '14': 'Display Mode Menu',
+					   '19': 'Save Waveform Menu',
+					   '1A': 'Recall Waveform Menu',
+					   '1B': 'STORE/NONSTORE',
+					   '1C': 'Acq Mode Menu',
+					   '20': 'X10 Mag',
+					   '21': 'Variable Gain',
 					   '22': 'AUTO LVL:PUSH'}
 		try:
 			self.portstr = portstring
@@ -75,6 +84,10 @@ class Tek222(object):
 			self.portstr = None
 			raise
 
+	def press_button(buttoncode):
+		"""simulates pressing a button. returns number of bytes written."""
+		return __serialport__.write("BUT %s", buttoncode)
+		
 	def disconnect():
 		""" Disconnect the serial port."""
 		return __serialport__.close
