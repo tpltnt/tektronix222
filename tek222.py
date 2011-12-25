@@ -86,7 +86,7 @@ class Tek222(object):
 
 	def press_button(buttoncode):
 		"""simulates pressing a button. returns number of bytes written."""
-		return __serialport__.write("BUT %s", buttoncode)
+		return __serialport__.write("BUT %s\r", buttoncode)
 		
 	def disconnect():
 		""" Disconnect the serial port."""
