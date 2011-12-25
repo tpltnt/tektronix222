@@ -37,3 +37,12 @@ def when_the_oscilloscope_is_unplugged(step):
 @step(u'Then an exception should be raised')
 def then_an_exception_should_be_raised(step):
     assert False, 'This step must be implemented'
+
+@step(u'When the ID is queried')
+def when_the_id_is_queried(step):
+	#world.idstring = world.scope.get_id()
+    assert False, 'trying to query ID'
+
+@step(u'Then the ID should be returned')
+def then_the_id_should_be_returned(step):
+    assert 'ID TEK-222' in world.idstring, 'ID string is %s' % world.idstring

@@ -87,6 +87,11 @@ class Tek222(object):
 	def press_button(buttonlabel):
 		"""simulates pressing a button. returns number of bytes written."""
 		return __serialport__.write("BUT %s\r", __button__[buttonlabel])
+	
+	def get_id():
+		"""query the ID of the oscilloscope"""
+		__serialport__.write("ID?\r")
+		return __serialport__.readline()
 		
 	def disconnect():
 		""" Disconnect the serial port."""

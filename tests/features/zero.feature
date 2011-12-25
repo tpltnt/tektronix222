@@ -17,3 +17,8 @@ Feature: Use serial port
 		Given there is an initialized object
 		When the oscilloscope is unplugged
 		Then an exception should be raised
+
+	Scenario: Query ID
+		Given there is an initialized object
+		When the ID is queried
+		Then the ID should be returned
