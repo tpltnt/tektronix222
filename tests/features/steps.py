@@ -12,14 +12,14 @@ def when_the_object_is_initialized(step):
 	world.scope = Tek222()
 	assert 'Tek222' in str(world.scope.__class__), "object initialized %s" % world.scope.__class__
 
-@step(u'Then it should open the first file')
+@step(u'Then it should open the first serial port')
 def then_it_should_open_the_first_file(step):
-	currentport = world.scope.serialport
+	currentport = world.scope.portstr
 	assert '/dev/ttyUSB0' == currentport, "first port taken %s" % currentport
 
 @step(u'Given there is an initialized object')
 def given_there_is_an_initialized_object(step):
-    assert False, 'This step must be implemented'
+    assert 'Tek222' in str(world.scope.__class__), "object initialized %s" % world.scope.__class__
 
 @step(u'When the oscilloscope is disconnected')
 def when_the_oscilloscope_is_disconnected(step):
