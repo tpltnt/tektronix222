@@ -28,7 +28,11 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 class Tek222:
+	"""This is a class for interfacing to the Tektronix 222 oscilloscope.
 
+	It uses FTDI-based USB to serial converters and pySerial for
+	communication, since drivers should be readily available.
+	"""
 	def __init__(self):
 		__title__ = 'tek222'
 		__version__ = '0.0.1'
@@ -38,4 +42,6 @@ class Tek222:
 		self.usbdevice = '/dev/ttyUSB0'
 
 	def get_serial_port(self):
+		"""This function returns a string of USB device currently used.
+		"""
 		return self.usbdevice
