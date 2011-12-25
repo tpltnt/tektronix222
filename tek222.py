@@ -27,7 +27,7 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
-class Tek222:
+class Tek222(object):
 	"""This is a class for interfacing to the Tektronix 222 oscilloscope.
 
 	It uses FTDI-based USB to serial converters and pySerial for
@@ -39,9 +39,5 @@ class Tek222:
 		__author__ = 'tpltnt'
 		__license__ = 'Modified BSD License'
 		__copyright__ = 'Copyright 2011 tpltnt'
-		self.usbdevice = '/dev/ttyUSB0'
+		self.serialport = '/dev/ttyUSB0'
 
-	def get_serial_port(self):
-		"""This function returns a string of USB device currently used.
-		"""
-		return self.usbdevice
