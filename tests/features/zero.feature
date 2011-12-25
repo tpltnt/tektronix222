@@ -3,10 +3,10 @@ Feature: Use serial port
 	the USB serial port should be used
 
 
-	Scenario: Open without devicefile given
+	Scenario: Open with given serial port
 		Given there is no file named
 		When the object is initialized
-		Then it should open the first serial port
+		Then it should open the given serial port
 
 	Scenario: Disconnect oscilloscope
 		Given there is an initialized object

@@ -26,7 +26,9 @@ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
+
 import serial
+
 
 class Tek222(object):
 	"""This is a class for interfacing to the Tektronix 222 oscilloscope.
@@ -34,14 +36,19 @@ class Tek222(object):
 	It uses FTDI-based USB to serial converters and pySerial for
 	communication, since drivers should be readily available.
 	"""
-	def __init__(self):
+	
+	def __init__(self,portstring):
 		__title__ = 'tek222'
 		__version__ = '0.0.1'
 		__author__ = 'tpltnt'
 		__license__ = 'Modified BSD License'
 		__copyright__ = 'Copyright 2011 tpltnt'
-		self.serialport = serial.Serial(0)
-		self.portstr = serialport.portstr
+		try:
+			__serialport__ = serial.Serial()
+			self.portstr = portstring
+		except serial.SerialException:
+			self.portstr = None
+			raise
 
 	def disconnect():
 		serialport.close
