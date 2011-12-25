@@ -10,12 +10,10 @@ def given_there_is_no_file_named(step):
 @step(u'When the object is initialized')
 def when_the_object_is_initialized(step):
 	world.scope = Tek222()
-	assert world.scope, "object initialized %d" % world.scope
+	assert world.scope, "object initialized %s" % world.scope.__class__
 
 @step(u'Then it should open the first file')
 def then_it_should_open_the_first_file(step):
-	currentdevice = world.scope.get_serial_port()
-        if '/dev/ttyUSB0' == currentdevice :
-                assert True, 'yay!'
-        else:
-                assert False, 'not first device'
+	currentport = world.scope.serialport
+    assert '/dev/ttyUSB0' == currentport, "first port taken"
+
