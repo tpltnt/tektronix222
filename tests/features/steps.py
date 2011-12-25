@@ -23,7 +23,7 @@ def given_there_is_an_initialized_object(step):
 
 @step(u'When the oscilloscope is disconnected')
 def when_the_oscilloscope_is_disconnected(step):
-    assert False, 'This step must be implemented'
+    assert world.scope.disconnect, 'scope connection closed'
 
 @step(u'Then the serial port should be closed')
 def then_the_serial_port_should_be_closed(step):
