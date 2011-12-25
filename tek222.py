@@ -44,11 +44,21 @@ class Tek222(object):
 		__license__ = 'Modified BSD License'
 		__copyright__ = 'Copyright 2011 tpltnt'
 		try:
-			__serialport__ = serial.Serial()
 			self.portstr = portstring
+			"""
+			RS232 parameters:
+			startbit: 1
+			stopbit: 1
+			parity: none
+			flowcontrol: xon/xoff
+			data: 8bit
+			rates: 300, 1200, 2400, 9600
+			"""
+			__serialport__ = serial.Serial(self.portstr, 9600, timeout=None, xonxoff=1)
+
 		except serial.SerialException:
 			self.portstr = None
 			raise
 
 	def disconnect():
-		serialport.close
+		return __serialport__.close
