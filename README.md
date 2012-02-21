@@ -7,6 +7,7 @@ This is a python script for interfacing to the Tektronix 222 oscilloscope.
 It uses FTDI-based USB to serial converters for communication, since drivers
 should be readily available.
 
+**status:** dormant (hardware gone)
 
 Ressources
 ----------
